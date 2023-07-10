@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check the result</title>
+  <style>
+    #main {
+      height: 100%;
+      width:  100%;
+      background-color: #800080; /* Replace #000 with your desired background color */
+      position: absolute;
+      /* Add the background image */
+      background-image: url('Web.jpg');
+      /* Adjust the background image properties */
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #inputs {
+      width: 24rem;
+      height: 38rem;
+      box-shadow: 10px 10px 18px coral;
+      position: relative;
+      margin: 6% auto;
+      border-radius: 1rem;
+      font-weight: bolder;
+      background-color: #FF8C00;
+      padding: 8px;
+      color: white;
+      text-align: center;
+    }
+
+    input {
+      font-weight: bolder;
+      background-color: rgba(139,0,0);
+      color: white;
+      border: none;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 4px 4px 10px white;
+      border-radius: 9px;
+    }
+
+    p {
+      margin-top: 15px;
+      background-color: #FFD700; /* Replace #FFD700 with your desired background color */
+      color: #000000; /* Replace #800080 with your desired text color */
+      padding: 4px;
+    }
+    /* Remove the .blinking-text class */
+
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Add a new CSS class for the image */
+    .logo {
+      width: 150px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    #downloadButton {
+      font-weight: bolder;
+      background-color: rgba(0, 128, 0); /* Change the background color as desired */
+      color: white;
+      border: none;
+      margin: 8px;
+      padding: 8px;
+      box-shadow: 4px 4px 10px white;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 8px; /* Increase or decrease this value to adjust line spacing */
+      color: white; /* Change the text color as desired */
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="inputs" align="center">
+      <!-- Add the <img> tag with the source of your PNG file -->
+      <img class="logo" src="KYP.png" alt="Logo">
+      <h2><strong>Enter your Learner Code and find out your exam result</strong></h2>
+      <input type="text" id="studentName" placeholder="Learner Code">
+      <input type="button" onclick="checkResult()" value="Check your Result!">
+      <p id="output"></p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.0.2/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
